@@ -1,0 +1,75 @@
+#jumbotron .wrapper {
+  background-color: #000;
+  margin-top: 30px;
+  display: flex;
+}
+
+#jumbotron img {
+  width: 50%;
+}
+
+#jumbotron .content {
+  padding: 0 20px 0 60px;
+  width: 385px;
+}
+
+#jumbotron .content h1 {
+  font-family: "Akziden";
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #fff;
+  padding-top: 77px;
+  letter-spacing: 5px;
+  line-height: 1;
+}
+
+#jumbotron .content p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  padding: 23px 0 50px 0;
+  line-height: 25px;
+}
+
+#jumbotron .btns {
+  padding-bottom: 75px;
+}
+
+#jumbotron .btns .mainBtn {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  background-color: #fff;
+  border: none;
+  padding: 15px 31px 13px;
+  letter-spacing: 2px;
+}
+
+#jumbotron .btns a {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  color: #fff;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  margin-left: 11px;
+}
+
+@media screen and (max-width: 840px) {
+  #jumbotron .wrapper {
+    margin-top: 0;
+  }
+
+  #jumbotron img {
+    display: none;
+  }
+
+  #jumbotron .content {
+    width: 100%;
+    padding-right: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #jumbotron .content {
+    padding: 0 10px;
+  }
+}
