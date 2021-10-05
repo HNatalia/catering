@@ -1,4 +1,6 @@
 @import 'reset.css';
 @import 'fonts.css';
+@import 'utilities.css';
 @import 'header.css';
 @import 'jumbotron.css';
+@import 'products.css';

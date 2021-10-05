@@ -1,0 +1,26 @@
+h1, h2 {
+  font-family: "Akziden";
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.mainBtn {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  background-color: #fff;
+  border: none;
+  padding: 15px 31px 13px;
+  letter-spacing: 2px;
+}
+
+.menus {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 19px;
+  color: #fff;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  margin-left: 11px;
+}
