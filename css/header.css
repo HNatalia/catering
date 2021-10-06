@@ -27,19 +27,19 @@
   padding: 5px;
 }
 
-.langs li:first-child {
-  background-color: #000;
-}
-
-.langs li:first-child a {
-  color: #fff;
-}
-
 .langs li:hover {
   background-color: #000;
 }
 
 .langs li:hover a {
+  color: #fff;
+}
+
+.langs li.active {
+  background-color: #000;
+}
+
+.langs li.active a {
   color: #fff;
 }
 
@@ -140,13 +140,13 @@
   .hamburger-menu.close span:nth-child(1) {
     transform: rotate(45deg);
     margin-top: 10px;
-    transition: .7s;
+    transition: .3s;
   }
 
   .hamburger-menu.close span:nth-child(3) {
     transform: rotate(-45deg);
     margin-bottom: 10px;
-    transition: .7s;
+    transition: .3s;
   }
 
   .ham-langs {

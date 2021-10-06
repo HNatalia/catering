@@ -1,0 +1,69 @@
+[
+  {
+    "en": {
+      "about": "about",
+      "menus": "menus", 
+      "service": "service info",
+      "gallery": "gallery",
+      "friends": "friends",
+      "contact": "contact",
+      "order": "order",
+      "caption": "private catering",
+      "description": "Treat your guests to a beautifully plated dinner, hand-crafted canapes or a casual BBQ.",
+      "quote": "get a quote",
+      "menu": "view menus",
+      "corp": "corporate catering",
+      "priv": "private catering",
+      "wed": "wedding catering",
+      "ord": "online ordering",
+      "corporate": "We are able to serve events from 2 to 2000 guests and always reasonable prices.",
+      "private": "Fresh, seasonal and simple cuisine. Food is our business and our passion.",
+      "wedding": "We use only the best organic ingredients and gluten and dairy free cooking.",
+      "ordering": "Successful catering is about organisation, high quality service, and great food."
+    },
+
+    "ru": {
+      "about": "о нас",
+      "menus": "меню", 
+      "service": "сервис",
+      "gallery": "галерея",
+      "friends": "друзья",
+      "contact": "контакты",
+      "order": "заказать",
+      "caption": "личный рацион",
+      "description": "Побалуйте своих гостей красиво сервированным ужином, канапе ручной работы или приготовлением барбекю в непринужденной обстановке.",
+      "quote": "предложения",
+      "menu": "меню",
+      "corp": "корпоративный кэтэринг",
+      "priv": "индивидуальный кэтэринг",
+      "wed": "свадебный кэтэринг",
+      "ord": "онлайн заказ",
+      "corporate": "Мы можем обслуживать мероприятия от 2 до 2000 гостей и всегда по разумным ценам.",
+      "private": "Свежая, сезонная и простая кухня. Еда - это наш бизнес и наша страсть.",
+      "wedding": "Мы используем только лучшие органические ингредиенты, а также готовим без глютена и молочных продуктов.",
+      "ordering": "Успешный кейтеринг - это организация, высокое качество обслуживания и отличная еда."
+    },
+
+    "esp": {
+      "about": "para somos",
+      "menus": "menús", 
+      "service": "servicio",
+      "gallery": "galería",
+      "friends": "amigos",
+      "contact": "contacto",
+      "order": "comprar online",
+      "caption": "catering privado",
+      "description": "Invite a sus invitados a una cena bellamente servida, canapés hechos a mano o una barbacoa informal.",
+      "quote": "cotización",
+      "menu": "ver menús",
+      "corp": "catering corporativo",
+      "priv": "catering privado",
+      "wed": "catering de bodas",
+      "ord": "pedidos en línea",
+      "corporate": "Somos capaces de atender eventos desde 2 hasta 2000 invitados y precios siempre razonables.",
+      "private": "Cocina fresca, de temporada y sencilla. La comida es nuestro negocio y nuestra pasión.",
+      "wedding": "Utilizamos solo los mejores ingredientes orgánicos y cocina sin gluten y sin lácteos.",
+      "ordering": "El catering exitoso se trata de organización, servicio de alta calidad y buena comida."
+    }
+  }
+]
