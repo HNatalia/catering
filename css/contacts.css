@@ -72,6 +72,7 @@ input, textarea {
   font-size: 15px;
   margin-bottom: 22px;
   resize: none;
+  color: #959595;
 }
 
 textarea {

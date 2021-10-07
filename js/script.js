@@ -1,5 +1,5 @@
 (() => {
-
+  console.log('+')
   const langs = document.querySelectorAll('.langs li');
   const linksL = document.querySelectorAll('header .left a');
   const linksR = document.querySelectorAll('header .right a');
@@ -9,11 +9,11 @@
   const description = document.querySelectorAll('.desc'); 
   const span = document.querySelectorAll('span');
   const h3 = document.querySelectorAll('h3'); 
+  const inputName = document.querySelector('.name'); 
+  const inputEmail = document.querySelector('.email'); 
+  const textarea = document.querySelector('textarea'); 
   const order = document.querySelector('.order');
   const h1 = document.querySelector('h1'); 
-
-  console.log(span)
-
 
   const toggleMenu = () => {
     const menu = document.querySelector('.hamburger-menu');
@@ -39,13 +39,30 @@
   const translateMult = (selector, langData, lang) => {
     selector.forEach(el => {
       const key = el.getAttribute('key');
-      el.textContent = langData[0][lang][key]
+      el.textContent = langData[0][lang][key];
+
+      if (lang !== 'ru' && selector === span) {
+        span.forEach(el => {
+          el.classList.remove('ru');
+        })
+      } 
+
+      if (lang === 'ru' && selector === span) {
+        span.forEach(el => {
+          if (el.getAttribute('key')) {
+            el.classList.add('ru');
+          }
+        })
+      } 
     })
   }
 
   const translate = (selector, langData, lang) => {
     const key = selector.getAttribute('key');
     selector.textContent = langData[0][lang][key]
+    if (selector === inputName || inputEmail || textarea) {
+      selector.setAttribute('placeholder', `${langData[0][lang][key]}`)
+    }
   }
 
   const getLocalLang = () => {
@@ -98,6 +115,9 @@
           translateMult(h2, data, attr);
           translateMult(span, data, attr);
           translateMult(h3, data, attr);
+          translate(inputName, data, attr);
+          translate(inputEmail, data, attr);
+          translate(textarea, data, attr);
           translate(order, data, attr);
           translate(h1, data, attr);
         })

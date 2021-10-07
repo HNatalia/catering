@@ -30,8 +30,16 @@
   line-height: 1;
 }
 
+/* .product h2.ru {
+  font-size: 17px;
+} */
+
 .product span {
   display: block;
+}
+
+.product span.ru {
+  font-size: 17px;
 }
 
 .product p {
