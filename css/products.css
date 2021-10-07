@@ -30,6 +30,10 @@
   line-height: 1;
 }
 
+.product span {
+  display: block;
+}
+
 .product p {
   font-size: 15px;
   line-height: 1.6;
