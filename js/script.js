@@ -92,7 +92,7 @@
         }
       })
 
-      fetch("./langs.json")
+      fetch("./json/langs.json")
         .then(res => res.json())
         .then(data => {
           
