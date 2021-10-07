@@ -33,6 +33,10 @@
 }
 
 @media screen and (max-width: 840px) {
+  .jumbotron-container {
+    margin-top: 0;
+  }
+  
   #jumbotron .wrapper {
     margin-top: 0;
   }

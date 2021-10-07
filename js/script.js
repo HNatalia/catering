@@ -1,7 +1,6 @@
 (() => {
-  console.log('+')
-  const langs = document.querySelectorAll('.langs li');
-  const linksL = document.querySelectorAll('header .left a');
+  const langs = document.querySelectorAll('.langs li, .ham-langs li');
+  const linksL = document.querySelectorAll('header .left a, .menu a');
   const linksR = document.querySelectorAll('header .right a');
   const btn = document.querySelectorAll('.mainBtn'); 
   const view = document.querySelectorAll('.menus');
@@ -14,6 +13,9 @@
   const textarea = document.querySelector('textarea'); 
   const order = document.querySelector('.order');
   const h1 = document.querySelector('h1'); 
+  const navMenu = document.querySelector('.bottom-bar'); 
+  const menuLinks = document.querySelectorAll('.bottom-bar a');
+  const logo = document.querySelector('.logo'); 
 
   const toggleMenu = () => {
     const menu = document.querySelector('.hamburger-menu');
@@ -42,7 +44,14 @@
       el.textContent = langData[0][lang][key];
 
       if (lang !== 'ru' && selector === span) {
+        navMenu.classList.remove('ru');
+        logo.style.margin = '0 auto';
+
         span.forEach(el => {
+          el.classList.remove('ru');
+        })
+
+        menuLinks.forEach(el => {
           el.classList.remove('ru');
         })
       } 
@@ -52,6 +61,13 @@
           if (el.getAttribute('key')) {
             el.classList.add('ru');
           }
+        });
+
+        navMenu.classList.add('ru');
+        logo.style.margin = '0 35px';
+
+        menuLinks.forEach(el => {
+          el.classList.add('ru');
         })
       } 
     })
@@ -93,7 +109,7 @@
   }
 
   const langChange = () => {   
-
+    console.log(langs)
     langs.forEach(el => {
       el.addEventListener('click', () => {
         removeActiveLang();
@@ -132,3 +148,9 @@
     langChange();
   });
 })();
+
+
+// fix lang active bg
+// add pages for navigator, link them, translate them
+// add animations
+// send form to email, validate form

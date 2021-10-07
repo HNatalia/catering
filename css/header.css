@@ -58,6 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .bottom-bar ul li a, .menu ul li a {
@@ -67,12 +68,25 @@
   letter-spacing: 2px;
 }
 
+.bottom-bar ul li a.ru, .menu ul li a.ru {
+  letter-spacing: normal;
+}
+
 .bottom-bar .left a {
   margin-right: 45px;
 } 
 
 .bottom-bar .right a {
   margin-left: 48px;
+}
+
+.bottom-bar.ru {
+  justify-content: center;
+}
+
+.bottom-bar.ru a{
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .logo p {
@@ -122,10 +136,10 @@
 
   .hamburger-menu .fadeOut {
     position: absolute;
-    background-color: grey;
+    background-color: #fff;
     top: 70px;
-    padding: 15px;
-    width: 600%;
+    padding: 30px;
+    width: calc(100vw - 20px);
     display: none;
   }
 
@@ -157,6 +171,14 @@
     margin-right: 10px;
   }
   
+  .ham-langs li.active {
+    background-color: #000;
+  }
+
+  .ham-langs li.active a {
+    color: #fff;
+  }
+
   .ham-langs li:last-child {
     margin-right: 0;
   }
@@ -201,6 +223,14 @@
     justify-content: flex-end;
     order: 2;
     margin-top: 0;
+  }
+
+  .bottom-bar {
+    width: 70%;
+  }
+
+  .logo {
+    margin: 0 auto;
   }
 
   .langs, .left, .right {
