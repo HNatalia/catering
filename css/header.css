@@ -189,14 +189,6 @@
     padding: 5px;
   }
   
-  .ham-langs li:first-child {
-    background-color: #000;
-  }
-  
-  .ham-langs li:first-child a {
-    color: #fff;
-  }
-  
   .ham-langs li:hover {
     background-color: #000;
   }
@@ -253,5 +245,9 @@
 
   .logo p {
     font-size: 7px;
+  }
+
+  .order {
+    text-align: center;
   }
 }

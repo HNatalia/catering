@@ -109,12 +109,14 @@
   }
 
   const langChange = () => {   
-    console.log(langs)
     langs.forEach(el => {
       el.addEventListener('click', () => {
         removeActiveLang();
-        el.classList.add('active');
         const attr = el.getAttribute('id');
+
+        Array.from(langs)
+        .filter(el => el.getAttribute('id') === attr)
+        .map(el => el.classList.add('active'));
 
         localStorage.setItem('langs', JSON.stringify(attr));
         localStorage.setItem('active', JSON.stringify(attr));
@@ -123,7 +125,7 @@
         fetch(langsData)
         .then(res => res.json())
         .then(data => {
-          console.log(data)
+          
           translateMult(linksL, data, attr);
           translateMult(linksR, data, attr);
           translateMult(description, data, attr);
@@ -151,7 +153,6 @@
 })();
 
 
-// fix lang active bg
 // add pages for navigator, link them, translate them
 // add animations
 // send form to email, validate form
