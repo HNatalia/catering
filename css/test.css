@@ -1,0 +1,39 @@
+section {
+  background-color: #ebebeb;
+}
+
+.section-container {
+  padding: 50px 0 40px;
+  max-width: 870px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+h2 {
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+}
+
+.desc-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+}
+ 
+p {
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 840px) {
+  .section-container {
+    padding: 25px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desc-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}

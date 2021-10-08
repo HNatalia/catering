@@ -17,6 +17,7 @@
   const menuLinks = document.querySelectorAll('.bottom-bar a');
   const logo = document.querySelector('.logo'); 
 
+
   const toggleMenu = () => {
     const menu = document.querySelector('.hamburger-menu');
     const list = menu.querySelector('.fadeOut');
@@ -156,3 +157,5 @@
 // add pages for navigator, link them, translate them
 // add animations
 // send form to email, validate form
+// translate online ordering
+// save lang in local storage when open new page
