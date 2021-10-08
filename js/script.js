@@ -41,7 +41,7 @@
   const translateMult = (selector, langData, lang) => {
     selector.forEach(el => {
       const key = el.getAttribute('key');
-      el.textContent = langData[0][lang][key];
+      el.textContent = langData[lang][key];
 
       if (lang !== 'ru' && selector === span) {
         navMenu.classList.remove('ru');
@@ -75,9 +75,9 @@
 
   const translate = (selector, langData, lang) => {
     const key = selector.getAttribute('key');
-    selector.textContent = langData[0][lang][key]
+    selector.textContent = langData[lang][key]
     if (selector === inputName || inputEmail || textarea) {
-      selector.setAttribute('placeholder', `${langData[0][lang][key]}`)
+      selector.setAttribute('placeholder', `${langData[lang][key]}`)
     }
   }
 
@@ -119,10 +119,11 @@
         localStorage.setItem('langs', JSON.stringify(attr));
         localStorage.setItem('active', JSON.stringify(attr));
 
-        fetch("../langs.json")
+        const langsData = "https://my-json-server.typicode.com/HNatalia/data-api/langs";
+        fetch(langsData)
         .then(res => res.json())
         .then(data => {
-          
+          console.log(data)
           translateMult(linksL, data, attr);
           translateMult(linksR, data, attr);
           translateMult(description, data, attr);
