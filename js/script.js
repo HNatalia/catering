@@ -16,6 +16,7 @@
   const navMenu = document.querySelector('.bottom-bar'); 
   const menuLinks = document.querySelectorAll('.bottom-bar a');
   const logo = document.querySelector('.logo'); 
+  const langsData = "https://my-json-server.typicode.com/HNatalia/data-api/langs";
 
   const toggleMenu = () => {
     const menu = document.querySelector('.hamburger-menu');
@@ -92,17 +93,22 @@
         }
       })
 
-      fetch("./json/langs.json")
+      fetch(langsData)
         .then(res => res.json())
         .then(data => {
           
           translateMult(linksL, data, language);
           translateMult(linksR, data, language);
-          translateMult(p, data, language);
+          translateMult(description, data, language);
           translateMult(btn, data, language);
           translateMult(view, data, language);
           translateMult(h2, data, language);
+          translateMult(span, data, language);
+          translateMult(h3, data, language);
           translate(order, data, language);
+          translate(inputName, data, language);
+          translate(inputEmail, data, language);
+          translate(textarea, data, language);
           translate(h1, data, language);
         })
     }
@@ -121,7 +127,6 @@
         localStorage.setItem('langs', JSON.stringify(attr));
         localStorage.setItem('active', JSON.stringify(attr));
 
-        const langsData = "https://my-json-server.typicode.com/HNatalia/data-api/langs";
         fetch(langsData)
         .then(res => res.json())
         .then(data => {
@@ -144,7 +149,7 @@
     });
   }
 
-  // getLocalLang();
+  getLocalLang();
 
   document.addEventListener("DOMContentLoaded", () => {
     toggleMenu();
@@ -155,5 +160,3 @@
 
 // add animations
 // send form to email, validate form
-// translate online ordering
-// save lang in local storage when open new page
