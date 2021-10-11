@@ -17,7 +17,6 @@
   const menuLinks = document.querySelectorAll('.bottom-bar a');
   const logo = document.querySelector('.logo'); 
 
-
   const toggleMenu = () => {
     const menu = document.querySelector('.hamburger-menu');
     const list = menu.querySelector('.fadeOut');
@@ -135,10 +134,10 @@
           translateMult(h2, data, attr);
           translateMult(span, data, attr);
           translateMult(h3, data, attr);
+          translate(order, data, attr);
           translate(inputName, data, attr);
           translate(inputEmail, data, attr);
           translate(textarea, data, attr);
-          translate(order, data, attr);
           translate(h1, data, attr);
         })
       });
@@ -154,7 +153,6 @@
 })();
 
 
-// add pages for navigator, link them, translate them
 // add animations
 // send form to email, validate form
 // translate online ordering
