@@ -82,9 +82,9 @@
     }
   }
 
-  const getLocalLang = () => {
-    if (localStorage.getItem('langs')) {
-      const language = JSON.parse(localStorage.getItem('langs'))
+  const getSessionStorage = () => {
+    if (sessionStorage.getItem('langs')) {
+      const language = JSON.parse(sessionStorage.getItem('langs'))
 
       langs.forEach(el => {
         if (el.getAttribute('id') === language) {
@@ -124,8 +124,8 @@
         .filter(el => el.getAttribute('id') === attr)
         .map(el => el.classList.add('active'));
 
-        localStorage.setItem('langs', JSON.stringify(attr));
-        localStorage.setItem('active', JSON.stringify(attr));
+        sessionStorage.setItem('langs', JSON.stringify(attr));
+        sessionStorage.setItem('active', JSON.stringify(attr));
 
         fetch(langsData)
         .then(res => res.json())
@@ -149,7 +149,7 @@
     });
   }
 
-  getLocalLang();
+  getSessionStorage();
 
   document.addEventListener("DOMContentLoaded", () => {
     toggleMenu();
