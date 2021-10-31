@@ -34,8 +34,16 @@
   grid-row-gap: 50px;
 }
 
+.wrapper.appear .block {
+  opacity: 1;
+  transform: translateY(0);
+  transition: .5s;
+}
+
 .block {
   display: flex;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 .icon {

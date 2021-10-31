@@ -2,15 +2,19 @@
   background-color: #000;
   margin-top: 30px;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 #jumbotron img {
   width: 50%;
+  animation: appear 1s;
 }
 
 #jumbotron .content {
   padding: 0 20px 0 60px;
   width: 385px;
+  animation: push 1s ease forwards;
 }
 
 #jumbotron .content h1 {
@@ -30,6 +34,18 @@
 
 #jumbotron .btns {
   padding-bottom: 75px;
+}
+
+@keyframes push {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media screen and (max-width: 840px) {

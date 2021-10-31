@@ -81,6 +81,18 @@ textarea {
   padding-top: 8px;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+}
+
+input.invalid, textarea.invalid {
+  border-color: rgb(236, 83, 83);
+}
+
+input.valid, textarea.valid {
+  border-color: rgb(83, 236, 96);
+}
+
 #contacts .mainBtn {
   max-width: fit-content;
   padding: 15px 22px 13px;

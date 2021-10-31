@@ -16,6 +16,8 @@
   const navMenu = document.querySelector('.bottom-bar'); 
   const menuLinks = document.querySelectorAll('.bottom-bar a');
   const logo = document.querySelector('.logo'); 
+  const submit = document.querySelector('form .mainBtn');
+  const formInfo = document.querySelectorAll('.add-text');
   const langsData = "https://my-json-server.typicode.com/HNatalia/data-api/langs";
 
   const toggleMenu = () => {
@@ -144,19 +146,98 @@
           translate(inputEmail, data, attr);
           translate(textarea, data, attr);
           translate(h1, data, attr);
+          formValidation();
         })
       });
     });
   }
 
+  const formValidation = () => {
+    formInfo.forEach(el => {
+      const attr = el.getAttribute('placeholder');
+      el.value = '';
+
+      el.addEventListener('click', () => {
+        el.setAttribute('placeholder', '');
+      })
+
+      el.addEventListener('blur', () => {
+        el.setAttribute('placeholder', attr);
+      })
+    })
+
+    submit.addEventListener('click', e => {
+      e.preventDefault();
+
+      const reEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+      if (inputName.value === '') {
+        inputName.classList.add('invalid');
+      } else {
+        inputName.classList.remove('invalid');
+        inputName.classList.add('valid');
+      }
+      
+      if (!reEmail.test(inputEmail.value)) {
+        inputEmail.classList.add('invalid');
+      } else {
+        inputEmail.classList.remove('invalid');
+        inputEmail.classList.add('valid');
+      }
+
+      if (textarea.value === '') {
+        textarea.classList.add('invalid');
+      } else {
+        textarea.classList.remove('invalid');
+        textarea.classList.add('valid');
+      }
+
+      formInfo.forEach(el => {
+        console.log(formInfo.length)
+        if (el.classList.contains('valid')) {
+          console.log('yes')
+        } else {
+          return;
+        }
+      })
+
+      // const dataValues = [inputName.value, inputEmail.value, textarea.value];
+      // console.log(dataValues)
+      // const data = dataValues
+      //   .reduce((acc, input) => ({
+      //     ...acc,
+      //     [input.id]: input.value
+      //   }), {});
+      
+      // return data;
+    })
+  }
+
   getSessionStorage();
+
+  const productsAppear = selector => {
+    const container = document.querySelector(selector);
+    const distance = container.getBoundingClientRect().top;
+    const windowSize = window.innerHeight / 1.5;
+
+    if (windowSize > distance) {
+      container.classList.add('appear');
+    }
+  }
 
   document.addEventListener("DOMContentLoaded", () => {
     toggleMenu();
     langChange();
+    formValidation();
+
+    window.addEventListener('scroll', () => {
+      productsAppear('.products-container');
+      productsAppear('#choose .wrapper');
+    })
   });
 })();
 
 
 // add animations
 // send form to email, validate form
+
